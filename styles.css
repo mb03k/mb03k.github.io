@@ -1,0 +1,64 @@
+html {
+    overscroll-behavior: none;
+    background-color: #7525e2;
+
+  }
+
+.gradient {
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(334deg, #004317, #000075);
+	background-size: 180% 100%;
+	animation: gradient-animation 12s ease infinite;
+}
+
+@keyframes gradient-animation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.test {
+    font: 2em "Impact", fantasy;
+}
+
+
+
+/*
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+.cursor{
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+.typewriter-animation {
+  animation: 
+    typewriter 6s steps(60) 1s infinite alternate both,
+    blinkingCursor 500ms steps(1) infinite normal;
+}
+
+@keyframes typewriter {
+    0% { width: 0; }
+    5% { width: 0; }
+    95% { width: 100%; }
+    100% { width: 100%; }
+}
+
+@keyframes blinkingCursor {
+  from { border-right-color: rgba(255,255,255,.75); }
+  to { border-right-color: transparent; }
+}
+*/
