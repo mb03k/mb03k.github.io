@@ -28,26 +28,50 @@ html {
     font: 2em "Impact", fantasy;
 }
 
+.headerHover {
+    transition: 0.5s;
+}
+
+.headerHover:hover {
+    width: 60px;
+    background-color: gray;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.list {
+    border-radius: 3;
+}
+
+.insta {
+    border-radius: 10px;
+}
+
+.git {
+    border-radius: 20px;
+}
 
 
-/*
-@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
-
-.cursor{
-    width: 24em;
-    margin: 0 auto;
+.cursor {
     border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 30px;
+    font-weight: bold;
+    font-size: 5vw;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
-    transform: translateY(-50%);    
 }
 
 .typewriter-animation {
   animation: 
-    typewriter 6s steps(60) 1s infinite alternate both,
-    blinkingCursor 500ms steps(1) infinite normal;
+    typewriter 6s steps(60) 2.5s infinite alternate both,
+    blinkingCursor 700ms steps(500) infinite normal;
+}
+
+.stopAndPlayButton {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none; 
+    user-select: none;
 }
 
 @keyframes typewriter {
@@ -61,4 +85,3 @@ html {
   from { border-right-color: rgba(255,255,255,.75); }
   to { border-right-color: transparent; }
 }
-*/
