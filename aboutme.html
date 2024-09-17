@@ -11,6 +11,9 @@
 </head>
 
 <body class="gradient">
+    <script type="application/x-javascript" src="Script/headerListener.js"></script>
+    <script type="application/x-javascript" src="Script/buttonListener.js"></script>
+    <script type="application/x-javascript" src="Script/ageCalculater.js"></script>
     <div class="container-fluid">
         <div class="container bg-dark">
             <div class="row">
@@ -43,81 +46,53 @@
             </div>
         </div>
 
-        <div class=" bg-blue d-flex justify-content-center text-white">
-            <p class="stopAndPlayButton box cursor typewriter-animation">Hallo, ich bin Matthes👋</p>
-        </div>
+        <div class="container text-white">
+            <h1>Über mich</h1>
+            <h3>Ich bin <span id="yearsOfAge"></span>
+                Jahre alt
+                <br>Aber wie habe ich das jetzt einfach so sagen können?
+                <br>Ich meine will ich mein alter bis in die Unendlichkeit aktualisieren?
+                <br>Nein!
+                <br>Es gibt doch eine viiiiel einfacherere Möglichkeit
+                <br>Und zwar das Alter berechnen zu lassen!
+                <br>Ich habe es per JavaScript gemacht. You see, es gibt eine Klasse in JavaScript. Die "Date"-Klasse
+                <br>Davon kann man ein Objekt mit seinen Initialien erzeugen (z.B.: new Date("September 30, 2003")). Und darauf berechnungen durchführen
+                <br>Meine Funktion um daraus ein Alter zu berechnen sieht folgendermaßen aus:
 
-        <div class="container" style="background-color:#000046;">
-            <div class="row text-center" style="display:flex;align-items: center; height:100%;">
-                <div class="col-lg m-2" style="height: 80%; background-color: #b3e5fc; border-radius: 40px; opacity: 0.8;">
-                    <div class="col">
-                        <div class="rowOneCurrentProjects" id="currentProjects">
-                            <h1>Aktuelle Projekte</h1>
-                        </div>
-                        <div class="container row projectOne m-2" id="projectChess">
-                            <div class="col">
-                                <img class="img-fluid" src="assets/chess.png">
-                            </div>
-        
-                            <div class="col">
-                                <span>
-                                    <h5>Schach
-                                        <i class="bi bi-x-circle-fill" style="height:1rem; color: rgb(195, 0, 0);"></i>
-                                    </h5>
-                                    <p>Ein Spiel, für das ich brenne. Seit langem auf meiner To-Do-Liste</p>
-                                    <p>Siehe Github README für den aktuellen Stand</p>
-                                </span>
-                            </div>
-                        </div>
-
-                        <hr>
-
-                        <div class="container row projectTwo m-2" id="projectDame">
-                            <div class="col">
-                                <img class="img-fluid" src="assets/dame.png">
-                            </div>
-        
-                            <div class="col">
-                                <span>
-                                    <h5>Dame
-                                        <i class="bi bi-check-circle-fill" style="height:1rem; color: rgb(0, 195, 0);"></i>
-                                    </h5>
-                                    <p>Unser Abschlussprojekt für das Modul 'AOP II'</p>
-                                </span>
-                                
-                            </div>
-                        </div>
-                    </div>   
-                </div>
-                <div class="col-lg m-2" style="height:80%; background-color: #b3e5fc; border-radius: 40px; opacity: 0.8;" id="knowledge">
-                    <div class="col rowTwo">
-                        <h1>Mein Wissensweg (oder so)</h1>
-                        Grundschule<br>Hauptschule<br>Realschulabschluss<br>Ausbildung<br>
-                        SIKE<br>ich mach jetzt ein Praktikum<br>Okay arbeiten ist nicht meins, ich gehe auf die FOS<br>
-                        FOS war cool. Ich gehe jetzt studieren<br>Informatikstudium
-                    </div>
-                </div>
-
-                <div class="col-lg m-2" style="height:80%; background-color: #b3e5fc; border-radius: 40px; opacity: 0.8;" id="aboutme">
-                    <div class="col rowThree">
-                        <h1>Über mich</h1>
-                        Ich könnte hier viel schreiben. Ich bin ein Entrepreneur. Ich bin Gott. Ich bin alles.
-                        Aber nichts würde passen. Lieber leite ich dich auf den Feed weiter, auf dem ich versuche
-                        mich selbst zu verstehen. Eine Art <strike>Jakobsweg</strike> Matthesweg
-                    </div>
-                </div>
-            </div>
+                <br>function getAge(dateString) {
+                <br>let today = new Date();
+                <br>let birthDate = new Date(dateString);
+                <br>let age = today.getFullYear() - birthDate.getFullYear();
+                <br>
+                <br>let m = today.getMonth() - birthDate.getMonth();
+                <br>if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                <br>    age--;
+                <br>}
+                <br>
+                <br>return age;
+                <br>}
+                <br>(Ja, das ist alles aus StackOverflow kopiert (dont judge me))
+                <br>Hier übergebe ich den Parameter "dateString". Der ist wie im Beispiel "September 30, 2003"
+                <br>Und das war es auch schon im großen und ganzen... man berechnet age indem man das jetzige Jahr mit dem Geburtsjahr subtrahiert
+                <br>Und danach prüft man sogar noch, ob man Geburtstag hat. 
+                <br>Also relativ einfach
+                <br>Aber wieso fange ich damit eine Seite mit dem Name "Über mich" an?
+            </h3>
         </div>
 
         <div class="container">
-            Footer
+
         </div>
+
+        <script>
+            document.getElementById("yearsOfAge").innerHTML = getAge("September 30, 2003");
+
+            console.log(getAge("September 30, 2003"));
+        </script>
 
     </div>
 
-    <script type="application/x-javascript" src="Script/headerListener.js"></script>
-    <script type="application/x-javascript" src="Script/buttonListener.js"></script>
-    <script type="application/x-javascript" src="Script/ageCalculater.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

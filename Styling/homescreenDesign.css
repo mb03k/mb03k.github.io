@@ -1,5 +1,4 @@
 html, body {
-    overscroll-behavior: none;
     background-color: #7525e2;
     box-sizing: border-box;
     width: 100%;
@@ -36,4 +35,23 @@ html, body {
 
 .git {
     border-radius: 20px;
+}
+
+.rowOneCurrentProjects, .projectOne, .projectTwo, .rowTwo, .rowThree {
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.rowTwo:hover, .rowThree:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    background-color: #e6e6e6;
+}
+
+.rowOneCurrentProjects:hover, .projectOne:hover, .projectTwo:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    background-color: #e6e6e6;
 }
