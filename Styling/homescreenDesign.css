@@ -1,0 +1,39 @@
+html, body {
+    overscroll-behavior: none;
+    background-color: #7525e2;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
+
+.headerIcons {
+    min-height: 20px;
+    min-width: 20px;
+    width: 2vw;
+    height: 2vw;
+}
+
+.headerHover {
+    transition: 0.5s;
+}
+
+.headerHover:hover {
+    width: 60px;
+    background-color: gray;
+    cursor: pointer;
+    transition: 0.5s;
+    color:red;
+}
+
+.list {
+    border-radius: 3;
+}
+
+.insta {
+    border-radius: 10px;
+}
+
+.git {
+    border-radius: 20px;
+}
