@@ -14,6 +14,10 @@ document.getElementById("headerGithubButton").onclick = function() {
     myFunction();
 }
 
+document.getElementById("youtube").onclick = function() {
+    myFunction();
+}
+
 
 
 
