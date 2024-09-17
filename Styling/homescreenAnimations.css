@@ -1,6 +1,6 @@
 .gradient {
 	width: 100vw;
-	height: 100vh;
+	height: 100dvh;
 	background: linear-gradient(334deg, #004317, #000075);
 	background-size: 180% 100%;
 	animation: gradient-animation 12s ease infinite;
@@ -30,7 +30,7 @@
 
 .typewriter-animation {
   animation: 
-    typewriter 6s steps(60) 2.5s infinite alternate both,
+    typewriter 6s steps(60) 3s infinite alternate both,
     blinkingCursor 700ms steps(500) infinite normal;
 }
 
